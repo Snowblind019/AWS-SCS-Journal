@@ -8,8 +8,17 @@ I’m currently following **Adrian Cantrill’s in-depth AWS SCS course**, and d
 
 ## Current Progress
 
-### 🔄 Module 1 – [To Be Documented]  
-- Notes and labs for this module will be added as I progress.
+### ✅ Module 1 – Course Fundamentals and AWS Account Setup
+
+- Built the foundation for secure AWS operations by creating Management and Production accounts.
+- Implemented IAM best practices, including MFA setup on root and admin users to reduce risk.
+- Enabled IAM access to billing data, improving transparency and team-level visibility.
+- Configured cost control measures: PDF invoices, Free Tier alerts, CloudWatch billing alarms, and $10/month budget notifications.
+- Created IAM users with `AdministratorAccess` and switched daily operations away from root usage.
+- Practiced secure access key lifecycle management for CLI-based workflows.
+- Installed AWS CLI on Linux and configured named profiles for efficient multi-account access and automation.
+
+---
 
 ### 🔄 Module 2 – [To Be Documented]  
 - Notes and labs for this module will be added as I progress.
