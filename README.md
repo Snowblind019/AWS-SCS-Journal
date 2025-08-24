@@ -20,8 +20,17 @@ I’m currently following **Adrian Cantrill’s in-depth AWS SCS course**, and d
 
 ---
 
-### 🔄 Module 2 – [To Be Documented]  
-- Notes and labs for this module will be added as I progress.
+### ✅ Module 2 – Management and Security Governance with AWS Organizations
+
+- Established a centralized governance model by creating an AWS Organization from the Management account.
+- Linked the Production account under the Organization and configured secure cross-account access using `OrganizationAccountAccessRole`.
+- Practiced role switching via the AWS Console, enabling safe and efficient access to the Production and Development accounts from the Management account.
+- Created and organized accounts into `PROD` and `DEV` Organizational Units (OUs) to support environment-level policy controls.
+- Managed real-world service quotas by requesting an account creation limit increase through the AWS Service Quotas console.
+- Tested Service Control Policies (SCPs) to enforce permission boundaries across OUs—explicitly denying S3 actions to demonstrate policy effectiveness.
+- Gained experience with the permission evaluation model: IAM + SCP interaction, explicit denies, and the non-permissive nature of SCPs.
+
+---
 
 ### 🔄 Module 3 – [To Be Documented]  
 - Notes and labs for this module will be added as I progress.
