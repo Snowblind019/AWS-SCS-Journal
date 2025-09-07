@@ -32,9 +32,14 @@ I’m currently following **Adrian Cantrill’s in-depth AWS SCS course**, and d
 
 ---
 
-### 🔄 Module 3 – [To Be Documented]
+### ✅ Module 3 – Advanced Identity and Access Management in AWS
 
-- Notes and labs for this module will be added as I progress.
+- Built secure delegated admin patterns using IAM permission boundaries and scoped policies.
+- Enabled federated authentication via AWS Cognito and Google OAuth 2.0 to control access to protected S3 assets.
+- Configured IAM Identity Center (SSO) with custom permission sets and user/group access across the Organization.
+- Explored S3 access controls including presigned URLs, cross-account access, bucket policies, and object ownership behavior.
+- Created EC2 environments to query and analyze instance metadata for automation and identity-aware configuration.
+- Deployed CloudFormation templates to provision S3 and IAM resources and tested cross-account upload/delete behavior.
 
 ---
 
