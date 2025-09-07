@@ -43,9 +43,15 @@ I’m currently following **Adrian Cantrill’s in-depth AWS SCS course**, and d
 
 ---
 
-### 🔄 Module 4 – [To Be Documented]
+### ✅ Module 4 – Threat Detection via EC2 Metadata Exploitation and Mitigation
 
-- Notes and labs for this module will be added as I progress.
+- Deployed CloudFormation template simulating EC2 credential exposure scenarios.
+- Queried EC2 instance metadata to extract IAM temporary credentials.
+- Exported credentials to a local Windows machine and validated unauthorized AWS access.
+- Simulated multiple credential reuse attempts post-instance restart and observed token behavior.
+- Demonstrated how real-time metadata exposure can lead to credential theft.
+- Executed session revocation to invalidate compromised temporary tokens without disrupting valid role usage.
+- Restarted EC2 instance to force new session token issuance, ensuring fresh secure credentials.
 
 ---
 
@@ -67,7 +73,7 @@ I’m currently following **Adrian Cantrill’s in-depth AWS SCS course**, and d
 
 ---
 
-## About Me
+About Me
 
 From the start of my career, I’ve been fueled by curiosity, discipline, and a passion for learning. I earned my **AAS in Network Design and Administration by age 18**, started as a **NOC Analyst I**, and was promoted to **NOC Analyst II** within three months — driven by my adaptability and eagerness to grow.
 
