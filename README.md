@@ -55,9 +55,26 @@ I’m currently following **Adrian Cantrill’s in-depth AWS SCS course**, and d
 
 ---
 
-### 🔄 Module 5 – [To Be Documented]
+### ✅ Module 5 – Infrastructure Security (VPC, VPN, Endpoints, Storage)
 
-- Notes and labs for this module will be added as I progress.
+- Manually created custom VPC (`winter-vpc1`) with IPv4/IPv6 addressing and 12 subnets.
+- Configured Internet Gateway, route tables, and tested EC2 instance connectivity.
+- Rebuilt VPC using CloudFormation for automation and consistency.
+- Created 3 NAT Gateways with corresponding private route tables and fixed subnet associations.
+- Launched pfSense+ VPN setup:
+  - Deployed pfSense via CloudFormation.
+  - Configured IPsec tunnels and verified bi-directional connectivity.
+  - Validated security groups and route table configurations using Fleet Manager.
+- Built and tested VPC endpoints:
+  - EC2 Instance Connect (interface) and S3 Gateway endpoints.
+  - Verified S3 access through endpoint with endpoint-restricted policy (`aws:sourceVpce`).
+- Created VPC peering mesh (A↔B, B↔C, A↔C):
+  - Updated routing tables and SGs for full mesh ICMP communication.
+- Performed EBS test:
+  - Mounted, rebooted, detached, reattached, and snapshotted a gp3 volume.
+  - Migrated to another AZ and validated data persistence.
+- Tested EC2 Instance Store:
+  - Wrote to ephemeral volume, verified data persisted after reboot but lost after stop/start.
 
 ---
 
@@ -69,11 +86,11 @@ I’m currently following **Adrian Cantrill’s in-depth AWS SCS course**, and d
 
 ### 🔄 Module 7 – [To Be Documented]
 
-- Notes and labs for this module will be added as I progress.
+- Notes and labs for this module will be added as I progress..
 
 ---
 
-About Me
+## About Me
 
 From the start of my career, I’ve been fueled by curiosity, discipline, and a passion for learning. I earned my **AAS in Network Design and Administration by age 18**, started as a **NOC Analyst I**, and was promoted to **NOC Analyst II** within three months — driven by my adaptability and eagerness to grow.
 
