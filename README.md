@@ -108,9 +108,20 @@ I’m currently following **Adrian Cantrill’s in-depth AWS SCS course**, and d
 
 ---
 
-### 🔄 Module 7 – [To Be Documented]
+### ✅ Module 7 – Data Protection
 
-- Notes and labs for this module will be added as I progress.
+- Explored multiple encryption mechanisms for Amazon S3 by uploading files with SSE-S3, SSE-KMS using the default `aws/s3` key, and SSE-KMS using a custom KMS key (`WinterKey`).
+- Demonstrated access control behavior by applying an IAM policy to deny `kms:*` actions for the `iamadmin` user, confirming the inability to access SSE-KMS encrypted objects.
+- Verified how S3 default encryption settings affect uploads and tested behavior with and without KMS access.
+- Practiced symmetric encryption and decryption using AWS KMS via CLI:
+  - Created `WinterBot` KMS key.
+  - Encrypted and decrypted local text files using KMS commands within CloudShell.
+- Validated the confidentiality and integrity of KMS-encrypted data by comparing encrypted vs. decrypted file contents.
+- Deployed a test environment using CloudFormation to simulate Application Load Balancer (ALB) behavior across six EC2 instances.
+- Enabled ALB session stickiness (1 minute) and verified consistent routing to a single instance.
+- Simulated failover behavior by stopping and restarting backend EC2 instances and observing ALB’s stickiness behavior.
+- Disabled stickiness to observe default round-robin behavior across all EC2 targets.
+- Fully cleaned up all test resources including buckets, keys, stacks, and instances after validation.
 
 ---
 
