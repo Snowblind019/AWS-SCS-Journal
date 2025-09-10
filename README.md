@@ -78,15 +78,39 @@ I’m currently following **Adrian Cantrill’s in-depth AWS SCS course**, and d
 
 ---
 
-### 🔄 Module 6 – [To Be Documented]
+### ✅ Module 6 – Security Logging and Monitoring
 
-- Notes and labs for this module will be added as I progress.
+- Created S3 buckets (`winterday-source`, `winterday-processed`) and IAM role `PixelatorRole` with S3 + CloudWatch permissions.
+- Built a local Python Lambda function using Pillow to pixelate images and deployed it as `winterday`.
+  - Set up trigger on `ObjectCreated` event in source bucket.
+  - Processed images and verified output in destination bucket and CloudWatch logs.
+- Deployed EC2 instance via CloudFormation (`Winter-Wordpress`) and installed CloudWatch Agent.
+  - Collected metrics (CPU, memory, disk, network) and logs from `/var/log/secure`, `httpd/access_log`, `httpd/error_log`.
+  - Stored configuration in Systems Manager Parameter Store (`AmazonCloudWatch-linux`) for reusability.
+- Verified CWAgent metrics namespace and log ingestion in CloudWatch.
+- Created organization-wide CloudTrail (`SnowyWinter`):
+  - Enabled Management Events only.
+  - Streamed logs to S3 and CloudWatch log group using IAM role.
+- Used Amazon Athena:
+  - Set up `Winter` database and queried OpenStreetMap dataset from `osm-pds`.
+  - Filtered veterinary facility data using SQL.
+  - Cleaned up tables and database after analysis.
+- Enabled Amazon Macie:
+  - Created and scanned S3 bucket (`ep-mixed-data-2331`) with sensitive mock data.
+  - Created discovery job `Winterland` using all managed identifiers.
+  - Verified detection of credit card numbers, credentials, and license plates.
+- Integrated Macie with SNS and EventBridge:
+  - Created SNS topic `Macie-Alerts` and confirmed email subscription.
+  - Built EventBridge rule `macie-events` for alert forwarding.
+  - Created custom identifier (`LicensePlate`) using regex.
+  - Ran second discovery job (`LicensePlates`) to detect additional sensitive data.
+- Cleaned up all Macie jobs, S3 buckets, EventBridge rules, and SNS topics.
 
 ---
 
 ### 🔄 Module 7 – [To Be Documented]
 
-- Notes and labs for this module will be added as I progress..
+- Notes and labs for this module will be added as I progress.
 
 ---
 
